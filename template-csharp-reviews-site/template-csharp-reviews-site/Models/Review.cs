@@ -7,15 +7,17 @@
         public string Opinions;
         public DateTime DateTime;
         public bool Positive;
-        public string Name;
-        public Review(int id, int rating, string opinions, DateTime dateTime, bool positive, string name)
+        public string ProductName;
+        public string Author;
+        public Review(int id, int rating, string opinions, DateTime dateTime, bool positive, string Productname, string author)
         {
             Id = id;
             Rating = rating;
             Opinions = opinions;
             DateTime = dateTime;
             Positive = positive;
-            Name = name;
+            ProductName = Productname;
+            Author = author;
         }
     }
    

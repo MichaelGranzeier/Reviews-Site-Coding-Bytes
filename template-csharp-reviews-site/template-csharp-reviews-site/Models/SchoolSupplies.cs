@@ -8,6 +8,7 @@
         public double Price;
         public SupplyType SupplyType;
         public AgeGroup AgeGroup;
+        
             
     }
     public enum AgeGroup
