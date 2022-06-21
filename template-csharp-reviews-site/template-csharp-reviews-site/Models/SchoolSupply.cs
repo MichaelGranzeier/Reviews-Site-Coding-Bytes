@@ -1,9 +1,9 @@
 ﻿namespace template_csharp_reviews_site.Models
 {
-    public class SchoolSupplies
+    public class SchoolSupply
     {
-        public int Id;
-        public string Name;
+        public int Id { get; set; }
+        public string Name { get; set; }
         public string Description;
         public double Price;
         public SupplyType SupplyType;
@@ -12,7 +12,7 @@
             
     }
     public enum AgeGroup
-    { Pre_K, ElemtrySchool, IdermiditeSchool, MiddleSchool, HighSchool, College
+    { Pre_K, ElemSchool, MiddleSchool, HighSchool, College
     }
     public enum SupplyType
     {
