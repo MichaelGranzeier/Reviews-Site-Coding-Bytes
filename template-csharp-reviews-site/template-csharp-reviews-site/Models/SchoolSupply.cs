@@ -4,10 +4,11 @@
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Description;
-        public double Price;
-        public SupplyType SupplyType;
-        public AgeGroup AgeGroup;
+        public string Description { get; set; }
+        public double Price { get; set; }
+        public SupplyType SupplyType { get; set; }
+        public AgeGroup AgeGroup { get; set; }
+        public virtual List<Review> Reviews { get; set; }
         
             
     }
