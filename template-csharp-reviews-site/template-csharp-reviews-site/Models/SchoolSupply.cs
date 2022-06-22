@@ -16,7 +16,7 @@
     }
     public enum SupplyType
     {
-        Writing,Books,Binders,Calculator,Notebooks,Paper,Backpacks
+        Writing,Binders,Calculator,Backpacks
     }
 
 
