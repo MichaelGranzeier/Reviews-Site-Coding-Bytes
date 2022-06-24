@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using template_csharp_reviews_site.Models;
 
 namespace template_csharp_reviews_site.Controllers
@@ -18,16 +19,30 @@ namespace template_csharp_reviews_site.Controllers
 
         public IActionResult Create()
         {
+            ViewBag.SchoolSupplies = new SelectList(db.SchoolSupplies.ToList(), "Id", "Name");
             return View(new Review());
         }
-        [HttpPost]
 
+        [HttpPost]
         public IActionResult Create(Review model)
         {
-            List<Review> reviews = db.Reviews.ToList();
             db.Reviews.Add(model);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public IActionResult Edit(int id)
+        {
+            ViewBag.SchoolSupplies = new SelectList(db.SchoolSupplies.ToList(), "Id", "Name");
+            return View(db.Reviews.Find(id));
+        }
+        [HttpPost]
+        public IActionResult Edit(Review model)
+        {
+            db.Reviews.Update(model);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        
     }
 }
