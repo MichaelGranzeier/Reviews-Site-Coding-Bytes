@@ -43,6 +43,19 @@ namespace template_csharp_reviews_site.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public IActionResult Delete(int id)
+        {
+            Review review = db.Reviews.Find(id);
+            return View(review);
+        }
+        [HttpPost]
+        public IActionResult Delete(Review model)
+        {
+            db.Reviews.Remove(model);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
         
     }
 }
