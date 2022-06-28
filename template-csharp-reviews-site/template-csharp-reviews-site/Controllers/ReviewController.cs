@@ -17,6 +17,11 @@ namespace template_csharp_reviews_site.Controllers
             return View(db.Reviews.ToList());
         }
 
+        public IActionResult Details(int id)
+        {
+            return View(db.Reviews.Find(id));
+        }
+
         public IActionResult Create()
         {
             ViewBag.SchoolSupplies = new SelectList(db.SchoolSupplies.ToList(), "Id", "Name");
