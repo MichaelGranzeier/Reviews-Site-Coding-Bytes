@@ -13,6 +13,13 @@ html {
   min-height: 100%;
 }
 
+.container-fluid{
+    color: white;
+    background-color: darkgreen;
+}
+
+
+
 body {
   margin-bottom: 60px;
   background-color: darkgreen;
@@ -24,4 +31,9 @@ body {
 
 a {
     color: white;
+}
+
+a:hover{
+    color: white;
+    background-color: lightgreen;
 }
