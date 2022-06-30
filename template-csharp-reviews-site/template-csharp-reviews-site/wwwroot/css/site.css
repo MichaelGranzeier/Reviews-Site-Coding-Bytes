@@ -12,20 +12,30 @@ html {
   position: relative;
   min-height: 100%;
 }
+h1,
+h4{
+    color: white;
+}
+
+p{
+    color: white;
+}
 
 .container-fluid{
     color: white;
     background-color: darkgreen;
 }
 
-
+header{
+    color: white;
+}
 
 body {
   margin-bottom: 60px;
   background-color: darkgreen;
 }
 
-* {
+.form-group{
     color: white;
 }
 
@@ -36,4 +46,19 @@ a {
 a:hover{
     color: white;
     background-color: lightgreen;
+}
+
+.table{
+    color: white;
+}
+.row{
+    color: white;
+}
+
+footer{
+    color: white;
+}
+
+.container{
+    color: white;
 }
